@@ -1,18 +1,19 @@
 package Entidades;
 import java.awt.image.BufferedImage;
 import java.text.DateFormat;
+import java.util.Date;
 
 public class Cancion {
 
     private int id;
     private String tittle;
-    private DateFormat date;
+    private Date date;
     private float duration;
     private  String gender;
     private BufferedImage cover;
     private String descripiton;
 
-    public Cancion(int id, String tittle, DateFormat date, float duration, String gender, BufferedImage cover, String descripiton) {
+    public Cancion(int id, String tittle, Date date, float duration, String gender, BufferedImage cover, String descripiton) {
         this.id = id;
         this.tittle = tittle;
         this.date = date;
@@ -38,11 +39,11 @@ public class Cancion {
         this.tittle = tittle;
     }
 
-    public DateFormat getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(DateFormat date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
