@@ -1,8 +1,10 @@
 package Entidades;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
+
 public class Aplication {
-    public static void main(String[] args) {
+    public static void Biblioteca() {
 
         ArrayList<Cancion> canciones = new ArrayList<>();
         Cancion cancion = new Cancion(1, "Adonay", LocalDate.of(2000,3,4), 123, "Salsa", null, "cancion");
