@@ -11,7 +11,7 @@ public class UIUsuario {
     private static Aplication aplication;
 
     public static void menu() {
-        
+
         int response = 0;
         do {
             System.out.println("===========================");
@@ -32,21 +32,26 @@ public class UIUsuario {
             switch (response) {
                 case 1:
                     System.out.println("Canciones registradas");
+                    System.out.println("===========================");
                     Entidades.Aplication.Biblioteca();
 
                     break;
                 case 2:
                     System.out.println("Generos de canciones");
+                    System.out.println("===========================");
 
                     break;
                 case 3:
                     System.out.println("Año de publicación de canciones");
+                    System.out.println("===========================");
                     break;
                 case 4:
                     System.out.println("Tiempo de duración de canciones");
+                    System.out.println("===========================");
                     break;
                 case 5:
                     System.out.println("Orden de canciones por fecha");
+                    System.out.println("===========================");
                     break;
                 case 0:
                     System.out.println("¡Gracias por visitar PLAYLIST!");
