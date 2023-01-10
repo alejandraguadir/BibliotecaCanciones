@@ -1,19 +1,19 @@
 package Entidades;
 import java.awt.image.BufferedImage;
 import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Cancion {
-
     private int id;
     private String tittle;
-    private Date date;
+    private LocalDate date;
     private float duration;
     private  String gender;
     private BufferedImage cover;
     private String descripiton;
 
-    public Cancion(int id, String tittle, Date date, float duration, String gender, BufferedImage cover, String descripiton) {
+    public Cancion(int id, String tittle, LocalDate date, float duration, String gender, BufferedImage cover, String descripiton) {
         this.id = id;
         this.tittle = tittle;
         this.date = date;
@@ -22,7 +22,6 @@ public class Cancion {
         this.cover = cover;
         this.descripiton = descripiton;
     }
-
     public int getId() {
         return id;
     }
@@ -39,11 +38,11 @@ public class Cancion {
         this.tittle = tittle;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
