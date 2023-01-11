@@ -4,7 +4,7 @@ import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
-public class Cancion {
+public class Cancion implements Comparable<Cancion> {
     private int id;
     private String tittle;
     private LocalDate date;
@@ -76,5 +76,17 @@ public class Cancion {
 
     public void setDescripiton(String descripiton) {
         this.descripiton = descripiton;
+    }
+
+
+    @Override
+    public int compareTo(Cancion o) {
+        if(o.getDuration()>duration){
+            return -1;
+        }else if(o.getDuration()>duration) {
+           return 0;
+        }else {
+            return 1;
+        }
     }
 }
