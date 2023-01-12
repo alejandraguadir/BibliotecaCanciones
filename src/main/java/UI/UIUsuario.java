@@ -54,6 +54,7 @@ public class UIUsuario {
             System.out.println("3. Ver Canciones por año");
             System.out.println("4. Ver Canciones por duración");
             System.out.println("5. Ver Canciones por fecha");
+            System.out.println("6. Crear playlist");
             System.out.println("0. Salir");
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
@@ -83,8 +84,15 @@ public class UIUsuario {
                     System.out.println("===========================");
                     b.ordenarPorFecha(canciones);
                     break;
+                case 6:
+                    System.out.println("Crea tu playlist");
+                    System.out.println("===========================");
+                    System.out.println("");
+                    crearAlbum(sc);
+                    break;
                 case 0:
                     System.out.println("¡Gracias por visitar PLAYLIST!");
+
                     break;
                 default:
                     System.out.println("Ingresa un valor correcto");
@@ -92,4 +100,29 @@ public class UIUsuario {
 
         } while (response != 0);
     }
+
+    public static void crearAlbum(Scanner sc){
+        System.out.println("Ingrese los siguientes datos: ");
+        try {
+            // Solicitar nombre 
+            System.out.print("Nombre album: ");
+            String nombre = sc.next();
+            sc.nextLine();
+            b.mostrarCanciones();
+            System.out.print("Escribe el nombre de las canciones que desees agregar a la lista:");
+            String canciones = sc.next();
+            sc.nextLine();
+            
+            // Enviar los datos al controlador
+           // cController.crearContacto(nombre, apellido, telefono, organizacion);
+            
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        }
+   
+
 }
+
+
+

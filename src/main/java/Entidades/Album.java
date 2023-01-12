@@ -14,6 +14,8 @@ public class Album {
         this.canciones = canciones;
     }
 
+    
+
     public int getId() {
         return id;
     }
@@ -37,4 +39,13 @@ public class Album {
     public void setCanciones(ArrayList<Cancion> canciones) {
         this.canciones = canciones;
     }
+
+   /**
+ * 
+ */
+public void crearAlbum(){
+    Album nuevoAlbum = new Album(id, nombre, canciones);
+
+   }
+
 }
