@@ -1,23 +1,26 @@
 package Entidades;
+
 import java.awt.image.BufferedImage;
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+
 /**
  * Representa la clase Cancion
  */
 public class Cancion implements Comparable<Cancion> {
-    //Atributos clase canción
+    // Atributos clase canción
     private int id;
     private String tittle;
     private LocalDate date;
     private float duration;
-    private  String gender;
+    private String gender;
     private BufferedImage cover;
     private String descripiton;
 
-    //Método contructor clase Cancion
-    public Cancion(int id, String tittle, LocalDate date, float duration, String gender, BufferedImage cover, String descripiton) {
+    // Método contructor clase Cancion
+    public Cancion(int id, String tittle, LocalDate date, float duration, String gender, BufferedImage cover,
+            String descripiton) {
         this.id = id;
         this.tittle = tittle;
         this.date = date;
@@ -26,9 +29,11 @@ public class Cancion implements Comparable<Cancion> {
         this.cover = cover;
         this.descripiton = descripiton;
     }
-    //Consultores y modificadores clase Cancion
+
+    // Consultores y modificadores clase Cancion
     /**
      * Retorna objeto cancion por Id
+     * 
      * @return int que representa Id
      * @see #getId()
      */
@@ -36,20 +41,23 @@ public class Cancion implements Comparable<Cancion> {
         return id;
     }
 
-   /**
-    * @param id
-    */
+    /**
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
-      /**
+
+    /**
      * Retorna objeto cancion por titulo
+     * 
      * @return string que representa Tittle
      * @see #getTittle()
      */
     public String getTittle() {
         return tittle;
     }
+
     /**
      * 
      * @param tittle
@@ -58,8 +66,9 @@ public class Cancion implements Comparable<Cancion> {
         this.tittle = tittle;
     }
 
-      /**
+    /**
      * Retorna objeto cancion por Date
+     * 
      * @return date que representa fecha
      * @see #getDate()
      */
@@ -71,8 +80,9 @@ public class Cancion implements Comparable<Cancion> {
         this.date = date;
     }
 
-      /**
+    /**
      * Retorna objeto cancion por Duration
+     * 
      * @return float que representa tiempo de duración del objeto cancion
      * @see #getDuration()
      */
@@ -88,14 +98,16 @@ public class Cancion implements Comparable<Cancion> {
         this.duration = duration;
     }
 
-      /**
+    /**
      * Retorna objeto cancion por Genero del objeto cancion
+     * 
      * @return String que representa genero
      * @see #getGender()
      */
     public String getGender() {
         return gender;
     }
+
     /**
      * 
      * @param gender
@@ -104,14 +116,16 @@ public class Cancion implements Comparable<Cancion> {
         this.gender = gender;
     }
 
-      /**
+    /**
      * Retorna objeto cancion por cover
+     * 
      * @return BufferedImage que representa Cover
      * @see #getCover()
      */
     public BufferedImage getCover() {
         return cover;
     }
+
     /**
      * 
      * @param cover
@@ -120,14 +134,16 @@ public class Cancion implements Comparable<Cancion> {
         this.cover = cover;
     }
 
-      /**
+    /**
      * Retorna objeto cancion por descripción
-     * @return String que representa Descripción 
+     * 
+     * @return String que representa Descripción
      * @see #getDescription()
      */
     public String getDescripiton() {
         return descripiton;
     }
+
     /**
      * 
      * @param descripiton
@@ -136,14 +152,15 @@ public class Cancion implements Comparable<Cancion> {
         this.descripiton = descripiton;
     }
 
-    //Sobreescritura del metodo compareTo, metodo para filtrar el objeto cancion por tiempo de duración.
+    // Sobreescritura del metodo compareTo, metodo para filtrar el objeto cancion
+    // por tiempo de duración.
     @Override
     public int compareTo(Cancion o) {
-        if(o.getDuration()>duration){
+        if (o.getDuration() > duration) {
             return -1;
-        }else if(o.getDuration()>duration) {
-           return 0;
-        }else {
+        } else if (o.getDuration() > duration) {
+            return 0;
+        } else {
             return 1;
         }
     }

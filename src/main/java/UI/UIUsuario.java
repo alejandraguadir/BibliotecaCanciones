@@ -23,6 +23,7 @@ public class UIUsuario {
         this.b = b;
     }
 
+    // Metodo para almacenar biblioteca de canciones
     public static void llenarBiblioteca() {
         canciones = new ArrayList<>();
         album = new ArrayList<>();
@@ -43,6 +44,7 @@ public class UIUsuario {
         album.add(album1);
     }
 
+    // Metodo que retorna menú de interfaz de usuario
     public static void menu() {
         llenarBiblioteca();
         int response = 0;
@@ -60,39 +62,48 @@ public class UIUsuario {
             System.out.println("6. Crear playlist");
             System.out.println("0. Salir");
             Scanner sc = new Scanner(System.in);
+            // Captura la opción establecida por el usuario
             response = Integer.valueOf(sc.nextLine());
+            // switch para evaluar los respectivos metodos según el caso
             switch (response) {
+                // Caso 1 para mostrar lista de canciones
                 case 1:
                     System.out.println("Canciones registradas");
                     System.out.println("===========================");
                     b.mostrarCanciones();
                     break;
+                // Caso 2 para mostrar canciones por genero
                 case 2:
                     System.out.println("Canciones Genero Escogido");
                     System.out.println("===========================");
                     b.cancionesSegunGenero("Salsa");
                     break;
+                // Caso 3 para mostrar canciones según año.
                 case 3:
                     System.out.println("Canciones Año de publicación");
                     System.out.println("===========================");
                     b.cancionesSegunAño(2000);
                     break;
+                // Caso 4 para mostrar canciones por duración
                 case 4:
                     System.out.println("Tiempo de duración de canciones");
                     System.out.println("===========================");
                     b.ordenarPorDuracion(canciones);
                     break;
                 case 5:
+                    // Caso 5 para mostrar canciones por fecha
                     System.out.println("Orden de canciones por fecha");
                     System.out.println("===========================");
                     b.ordenarPorFecha(canciones);
                     break;
                 case 6:
+                    // Caso 6 para crear album
                     System.out.println("Crea tu playlist");
                     System.out.println("===========================");
                     System.out.println("");
                     crearAlbum(sc);
                     break;
+                // Caso 7 para salir del menú principal
                 case 0:
                     System.out.println("¡Gracias por visitar PLAYLIST!");
 
@@ -104,6 +115,7 @@ public class UIUsuario {
         } while (response != 0);
     }
 
+    // Metodo para crear album
     public static void crearAlbum(Scanner sc) {
         System.out.println("Ingrese los siguientes datos: ");
         try {
