@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class UIUsuario {
     @Autowired
-   private static Biblioteca b;
+    private static Biblioteca b;
 
     private static ArrayList<Cancion> canciones;
 
@@ -19,27 +19,30 @@ public class UIUsuario {
 
     public UIUsuario(Biblioteca b, ArrayList<Cancion> canciones, ArrayList<Album> album) {
         this.canciones = canciones;
-        this.album =album;
+        this.album = album;
         this.b = b;
     }
-    public static void llenarBiblioteca(){
+
+    public static void llenarBiblioteca() {
         canciones = new ArrayList<>();
         album = new ArrayList<>();
-        b = new Biblioteca(canciones,album);
-        Cancion cancion = new Cancion(1, "Adonay", LocalDate.of(2001,3,4), 150, "Salsa", null, "cancion");
-        Cancion cancion2 = new Cancion(2, "Limoncito con ron",LocalDate.of(1970,5,22), 400, "Salsa", null, "cancion");
-        Cancion cancion3 = new Cancion(3, "Amante", LocalDate.of(1998,4,13), 322, "Vallenatos", null, "cancion");
-        Cancion cancion4 = new Cancion(3, "Amante", LocalDate.of(2009,4,13), 222, "Salsa", null, "cancion");
-        Cancion cancion5 = new Cancion(3, "Amante", LocalDate.of(2021,4,13), 456, "Vallenatos", null, "cancion");
+        b = new Biblioteca(canciones, album);
+        Cancion cancion = new Cancion(1, "Adonay", LocalDate.of(2001, 3, 4), 150, "Salsa", null, "cancion");
+        Cancion cancion2 = new Cancion(2, "Limoncito con ron", LocalDate.of(1970, 5, 22), 400, "Salsa", null,
+                "cancion");
+        Cancion cancion3 = new Cancion(3, "Amante", LocalDate.of(1998, 4, 13), 322, "Vallenatos", null, "cancion");
+        Cancion cancion4 = new Cancion(3, "Amante", LocalDate.of(2009, 4, 13), 222, "Salsa", null, "cancion");
+        Cancion cancion5 = new Cancion(3, "Amante", LocalDate.of(2021, 4, 13), 456, "Vallenatos", null, "cancion");
 
         canciones.add(cancion);
         canciones.add(cancion2);
         canciones.add(cancion3);
         canciones.add(cancion4);
         canciones.add(cancion5);
-        Album album1 = new Album(1,"salida",canciones);
+        Album album1 = new Album(1, "salida", canciones);
         album.add(album1);
     }
+
     public static void menu() {
         llenarBiblioteca();
         int response = 0;
@@ -101,10 +104,10 @@ public class UIUsuario {
         } while (response != 0);
     }
 
-    public static void crearAlbum(Scanner sc){
+    public static void crearAlbum(Scanner sc) {
         System.out.println("Ingrese los siguientes datos: ");
         try {
-            // Solicitar nombre 
+            // Solicitar nombre
             System.out.print("Nombre album: ");
             String nombre = sc.next();
             sc.nextLine();
@@ -112,17 +115,10 @@ public class UIUsuario {
             System.out.print("Escribe el nombre de las canciones que desees agregar a la lista:");
             String canciones = sc.next();
             sc.nextLine();
-            
-            // Enviar los datos al controlador
-           // cController.crearContacto(nombre, apellido, telefono, organizacion);
-            
-        } catch (Exception e){
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        }
-   
+    }
 
 }
-
-
-
