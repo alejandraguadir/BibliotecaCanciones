@@ -5,8 +5,11 @@ import java.util.ArrayList;
 //Clase que representa Albúm
 public class Album {
     // Atributos
+    //atributo que hace referencia al numero unico de identificacion de los album
     private int id;
+    //atributo que hace referencia al nombre del album
     private String nombre;
+    //atributo que hace referencia a la lista de canciones
     private ArrayList<Cancion> canciones;
 
     // Metodo constructor

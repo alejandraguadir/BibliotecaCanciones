@@ -14,7 +14,12 @@ import java.util.Date;
 public class Biblioteca implements Comparator<Cancion> {
 
    // Atributos clase biblioteca
+
+   /*
+    atributo que hace referencia a lista de todas las canciones
+    */
    private static ArrayList<Cancion> canciones;
+   //atributo que hace referencia a las lista de albums
    private static ArrayList<Album> albums;
 
    // Constructor clase biblioteca

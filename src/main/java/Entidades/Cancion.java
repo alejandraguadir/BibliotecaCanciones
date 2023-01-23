@@ -10,12 +10,21 @@ import java.util.Date;
  */
 public class Cancion implements Comparable<Cancion> {
     // Atributos clase canción
+
+
+    //atributo que hace referencia  al identificador unico de la cancion
     private int id;
+    //atributo que hace referencia al titulo de las cancion
     private String tittle;
+    //atributo que hace referencia a la fecha de creacion de la cancion
     private LocalDate date;
+    //atributo que hace referencia a la duracion de la cancion
     private float duration;
+    //atributo que hace referencia al genero que pertenece la cancion
     private String gender;
+    //atributo que hace referencia a la imagen asociada a la cancion
     private BufferedImage cover;
+    //atributo que hace referencia a una breve descripcion de la cancion
     private String descripiton;
 
     // Método contructor clase Cancion
