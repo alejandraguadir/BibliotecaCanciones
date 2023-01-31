@@ -1,7 +1,6 @@
 package com.company.directory;
 
 import UI.UIUsuario;
-
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
